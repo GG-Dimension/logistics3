@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* Header */
+.top {
+  background-color: #003369;
+}
+
+.header {
+  position: fixed;
+  padding: 0;
+  transition: 0.6s;
+  z-index: 99999;
+}
+
+#mybot {
+  z-index: 9999;
+  transition: all 1s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+/* the sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  transition: all 1s ease-in-out;
+}
+
+/* Navbar */
+.nav-link {
+  color: #003369;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #557598;
+}
+
+.nav-info-items a{
+  color: #003369;
+}
+
+.nav-info-items a:hover{
+  color: #557598;
+}
+
+/* navbar-toggle */
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #003369;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+/* state when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+/* color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+  background: #003369;
+}
+
+/* Carousel */
+.carousel-item img {
+  opacity: 0.5;
+}
+
+.indicator-white {
+  color: #fff;
+  font-size: 40px;
+}
+
+.carousel .carousel-indicators button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-header {
+  font-size: 48px;
+}
+
+.main-text {
+  font-size: 20px;
+  word-spacing: 4px;
+}
+.main-btn {
+  background-color: #fff;
+  color: #003369;
+  border: none;
+}
+
+.main-btn:hover {
+  background-color: #557598;
+  opacity: 1;
+}
+.child {
+  position: absolute;
+  z-index: 1;
+  width: 55%;
+  background-color: #003369;
+  opacity: 0.8;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 2600px) {
+  .main-header {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .child {
+    width: 75%;
+    margin-bottom: 0px;
+  }
+  .main-header {
+    font-size: 48px;
+  }
+  .c-item {
+    height: 680px;
+  }
+  .c-img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+.parent img {
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    font-size: 28px;
+  }
+  .main-text{
+    font-size: 14px;
+  }
+}
+
+/* Business */
+.business {
+  margin-bottom: 80px !important;
+}
+
+.button-blue {
+  background-color: #003369 !important;
+  max-width: 100px;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.button-blue:hover {
+  background-color: #557598 !important;
+  color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
+  transition: ease-in-out 0.4s;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card-item {
+  overflow: hidden;
+}
+
+.card-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.card-item img:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+/* .card-img-top {
+    height: 15rem;
+    object-fit: cover;
+} */
+.card-body a {
+  color: #003369;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* About Us */
+.about-img__container {
+  position: relative;
+  cursor: pointer;
+}
+
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.3rem solid rgb(231, 119, 44);
+  z-index: -1;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.banner-title {
+  color: #003369;
+  font-size: 2.8rem;
+}
+/* .banner-text {
+  color: #f1f2f5 !important;
+  font-size: 2rem;
+  font-style: italic;
+} */
+
+.info-icon:hover {
+  color: #557598;
+  cursor: pointer;
+}
+
+/* Contact */
+.contact-map {
+  outline: 0.3rem solid rgb(231, 119, 44);
+}
+
+.contacts {
+  color: #003369;
+}
+
+.page-title {
+  margin: 50px 0px !important;
+}
+
+.contact-info {
+  color: #003369 !important;
+  font-size: 20px;
+}
+.contact-info a {
+  color: #003369;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #557598 !important;
+}
+
+/* What We Offer */
+
+.what-we-offer ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  text-align: start;
+}
+
+.what-we-offer a {
+  text-decoration: none;
+  color: #003369;
+  font-size: 20px;
+}
+
+.what-we-offer a:hover {
+  color: #557598 !important;
+}
+.what-we-offer .mark-color {
+  color: rgb(231, 119, 44) !important;
+}
+
+/* Footer */
+.footerWrapper {
+  background-color: #003369 !important ;
+}
+.footerLinks:hover {
+  /* color: #b8bbc4!important; */
+  color: rgb(231, 119, 44) !important;
+  cursor: pointer;
+}
